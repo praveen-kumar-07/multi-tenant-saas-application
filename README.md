@@ -1,38 +1,53 @@
-# Multi-Tenant SaaS Backend
+# Multi-Tenant SaaS Application
 
-## Overview
-This is a multi-tenant SaaS backend developed using Node.js, Express, and PostgreSQL.
+A full stack, Dockerized **Multi-Tenant SaaS Application** with tenant isolation capability, JWT login, Role-Based access control, with full user/project/task management.
 
-Each tenant (company) has full data isolation on both the middleware and database side.
-# Features
-- Tenant registration and login
--- JWT-based authentication
-- Role-based Access Control (Tenant Admin, User)
-- Tenant isolation
-- User Management
-- Project management
+This project illustrates real-world implementation of SaaS architecture where several tenants use a common system and isolate their data completely.
 
-- Task management
-- Maximums per tenant (users, projects)
-## Tech Stack
+---
+
+## ???? Tech Stack
+
+Blog
+
+### Backend
 Node.js
-Express.js
+- Express.js
 - PostgreSQL
+- JWT Authentication
 
-– JWT
-- bcrypt
-- Docker (PostgreSQL)
-## Architecture
+- bcrypt (Password Hashing)
+### Frontend
+- React (Vite)
 
-*   Authentication using JWT
-     {
-- Tenant context based solely on token
-• Middleware-implemented tenant isolation
-- With foreign keys and indexes in PostgreSQL
+- React Router
+- Fetch API
 
-## API Modules
-In order
+# Infrastructure
+Infrastructure
 
-- Author & Tenant
-- Users
-- Projects - Tasks ## How to Run Locally ### 1. Start PostgreSQL (Docker) ``` docker-compose up -d
+- Docker
+
+- Docker Compose
+---
+
+## ✨ Features
+Features
+- ???? **Multi-Tenant Architecture
+- Each tenant is represented by a distinct subdomain
+
+- Complete Tenant Level Data Isolation
+- ???? **Authentication & Authorization**
+
+- JWT认证
+- Role-based access (`tenant_admin`, `user
+
+• Bcrypt hashing of passwords
+- ????  **User Management**
+
+- Tenant admin can create users
+- Users are exclusive to one tenant
+
+- ???? **Project Management**
+
+- Projects creation and view as per tenant - Projects are separate in each tenancy - ✅ Task Management - "Tasks belong to projects" - It is tenant-specific. - ???? **Fully Dockerized – Frontend, backend, and database are running in containers - Single-command startup with Docker Compose --- ## ???? Folder Structure
